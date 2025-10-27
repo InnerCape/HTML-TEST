@@ -1,87 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Voluntário login</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login do Voluntário</title>
+  <link rel="stylesheet" href="loginstyle.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">&#0677519907; voluntarios</div>
-            <button class="menu-togle" onclick="toggleMaenu()"></button>
-            <ul id="navMenu"></ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Projeccs.html">Projects</a></li>
-                <li><a href="Login.html" class="active">login</a></li>
-            </ul>
-        </nav>
-    </header>
-    <!-- Login Form -->
-        <main>
-            <section class="signup-section">
-                <h2>Login</h2>
-                <div class="sucess message" id="sucessMessage">
-                </div>
+  <!-- Header -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Devolvendo Sorrisos</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="project.html">Projetos</a></li>
+        <li><a href="login.html" class="active">Login</a></li>
+      </ul>
+    </nav>
+  </header>
 
-                <form id="Vulunteer" onsubmit="handleSubmit(event)">
-                    <fieldset>
-                        <lenged>Dados pessoas</lenged>
-                        <div class="form group">
-                            <label for ="Name"></label>Nome completo*</label>
-                            <input type="text" id="name" required>
-                        </div>
+  <!-- Main Section -->
+  <main>
+    <section class="login-container">
+      <div class="form-card">
+        <h2>Login do Voluntário</h2>
+        <p>Preencha os dados abaixo para continuar</p>
 
-                        <div class="form-gruop">
-                            <label for="telephone">Telephone</label>
-                            <input type="number" id="telephone" name="telephone" placeholder="(11) 99999-9999" required>
-                        </div>
+        <form id="volunteerForm" onsubmit="return false;">
+          <fieldset>
+            <legend>Dados pessoais</legend>
 
-                        <div class="form-gruop">
-                            <label for="age">Idade*</label>
-                            <input type="number" id="age" name="age" min="18" required>
-                        </div>
-                    </fieldset>
+            <div class="form-group">
+              <label for="name">Nome completo*</label>
+              <input type="text" id="name" name="name" required />
+            </div>
 
-                    <fieldsetf>
-                        <legend>Disponiblidade</legend>
-                        <div class="form-group">
-                            <label for="Disponiblidade">Quando pode ajudar como voluntario?</label>
-                            <select id="Disponiblidade" name="Disponiblidade" required>
-                                <option value="">Select</option>
-                                <option value="weekends">Finas de semana</option>
-                                <option value="during the week">Dias de semana</option>
-                                <option value="public holidays">Feriados</option>
-                                <option value="flexible">Flexivel</option>
-                            </select>
+            <div class="form-group">
+              <label for="telephone">Telefone*</label>
+              <input type="number" id="telephone" name="telephone" placeholder="(11) 99999-9999" required />
+            </div>
 
-                        </div>
-                    </fieldsetf>
+            <div class="form-group">
+              <label for="age">Idade*</label>
+              <input type="number" id="age" name="age" min="18" required />
+            </div>
+          </fieldset>
 
-                    <fieldset>
-                        <legend>Horario</legend>
-                        <div class="form-group">
-                            <label for="Time">Que horas que por quanto tempo pode ajudar?</label>
-                            <select id="Time" name="Time" require>
-                                <option value="Morning">8am to 10am</option>
-                                <option value="Afternoon">12:30 to 03:30</option>
-                                <option value="flexible">Flexivel</option>
-                            </select>
-                        </div>
-                    </fieldset>
-                </form>
-            </section>
-        </main>
+          <fieldset>
+            <legend>Disponibilidade</legend>
+            <div class="form-group">
+              <label for="disponibilidade">Quando pode ajudar como voluntário?</label>
+              <select id="disponibilidade" name="disponibilidade" required>
+                <option value="">Selecione</option>
+                <option value="weekends">Finais de semana</option>
+                <option value="weekdays">Dias de semana</option>
+                <option value="holidays">Feriados</option>
+                <option value="flexible">Flexível</option>
+              </select>
+            </div>
+          </fieldset>
 
-        <!-- Footer -->
-         <footer>
-            <p>&copy; 2025 Devolvendo Surrisos. Todos os direitos reservados </p>
-        <p>Done by &#0677519907; Voluntário</p>
-         </footer>
+          <fieldset>
+            <legend>Horário</legend>
+            <div class="form-group">
+              <label for="time">Que horas e por quanto tempo pode ajudar?</label>
+              <select id="time" name="time" required>
+                <option value="">Selecione</option>
+                <option value="morning">8h às 10h</option>
+                <option value="afternoon">12h30 às 15h30</option>
+                <option value="flexible">Flexível</option>
+              </select>
+            </div>
+          </fieldset>
 
-            <script src="script.js"></script>
+          <button type="submit" class="btn">Entrar</button>
+        </form>
+      </div>
+    </section>
+  </main>
 
+  <footer>
+    <p>&copy; 2025 Devolvendo Sorrisos - Todos os direitos reservados</p>
+  </footer>
 </body>
 </html>
