@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doação</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="donation-section">
+      <h2>Doar agora</h2>
+      <p>Olá! 😊</p>
+      <p>Agradecemos de coração por sua disposição em ajudar. Sua doação fará uma grande diferença! 💛</p>
+
+      <form id="donationForm" onsubmit="return false;">
+        <div class="form-group">
+          <label for="donationAmount">Valor da Doação:</label>
+          <input type="number" id="donationAmount" name="donationAmount" placeholder="Ex: R$50" required>
+        </div>
+
+        <p>
+            <div class="form-group">
+                <label for="paymentMethod">Método de Pagamento:</label>
+                <select id="paymentMethod" name="paymentMethod" required>
+                <option value="">Selecione</option>
+                <option value="creditCard">Cartão de Crédito</option>
+                <option value="debitCard">Cartão de Débito</option>
+                <option value="pix">PIX</option>
+                <option value="bankTransfer">Transferência Bancária</option>
+                </select>
+            
+            </div>
+        <div class="form-group">
+  <button type="submit">Doar Agora</button>
+</div>
+
+        <div class="form-group">
+        <a href="index.html">
+            <button type="button">Voltar para a Página Inicial</button>
+        </a>
+        </div>
+    </section>
+  </main>
+
+  <p>© 2025 Devolvendo Surrisos - Todos os direitos reservados.</p>
+
+</body>
+</html>
